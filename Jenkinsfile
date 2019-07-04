@@ -11,6 +11,7 @@ node {
    }
    stage('SonarScan') {
        //withSonarQubeEnv('SonarQube') {
+       echo 'Sonar scan'
          withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
              sh 'mvn clean package sonar:sonar' 
              sh 'mvn org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar ' +
