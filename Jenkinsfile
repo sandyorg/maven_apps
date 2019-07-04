@@ -14,7 +14,7 @@ node {
          withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
              sh 'mvn clean package sonar:sonar' 
              sh 'mvn org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar ' +
-             ' -Dsonar.host.url=http://sonarcloud.io ' +
+             ' -Dsonar.host.url=https://sonarcloud.io/ ' +
              ' -Dsonar.organization=itrainsonar2 '+ 
              ' -Dsonar.login=f01b35533f7e199c643b56eea9031d9640d0a928 '   
          //}
